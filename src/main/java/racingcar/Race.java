@@ -38,13 +38,16 @@ public class Race {
     public void printWinner() {
         int max = 0;
         boolean isFirst = true;
+        //get max winNums
         for (int i = 0; i < cr.carNum; i++) {
             if (max < cr.cars[i].getWinNum()) {
                 max = cr.cars[i].getWinNum();
             }
         }
+        //print Winner
         System.out.print("최종 우승자 : ");
         for (int i = 0; i < cr.carNum; i++) {
+            // add ',' if isn't first winner
             if (!isFirst && (max == cr.cars[i].getWinNum())) {
                 System.out.print(",");
             }
