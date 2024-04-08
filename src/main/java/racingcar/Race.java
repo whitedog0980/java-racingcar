@@ -7,11 +7,13 @@ import java.util.Random;
 public class Race {
     Random Rand = new Random();
     CreateCar cr = new CreateCar();
+    int raceRound;
 
-    int[] winNum;
 
     public void initRace() {
         cr.createCars();
+        System.out.println("경기 횟수를 입력해주세요.");
+        raceRound = Integer.parseInt(camp.nextstep.edu.missionutils.Console.readLine());
     }
 
     public boolean move() {
