@@ -25,12 +25,12 @@ public class Race {
     public void doRace() {
         for (int i = 0; i < cr.carNum; i++) {
             if (move()) {
-                cr.cars[i].winNum++;
+                cr.cars[i].increaseWinNum();
             }
         }
         for (int i = 0; i < cr.carNum; i++) {
-            System.out.print(String.format("%s : ", cr.cars[i].name));
-            System.out.println("-".repeat(cr.cars[i].winNum));
+            System.out.print(String.format("%s : ", cr.cars[i].getName()));
+            System.out.println("-".repeat(cr.cars[i].getWinNum()));
         }
     }
 
@@ -39,17 +39,17 @@ public class Race {
         int max = 0;
         boolean isFirst = true;
         for (int i = 0; i < cr.carNum; i++) {
-            if (max < cr.cars[i].winNum) {
-                max = cr.cars[i].winNum;
+            if (max < cr.cars[i].getWinNum()) {
+                max = cr.cars[i].getWinNum();
             }
         }
         System.out.print("최종 우승자 : ");
         for (int i = 0; i < cr.carNum; i++) {
-            if (!isFirst && (max == cr.cars[i].winNum)) {
+            if (!isFirst && (max == cr.cars[i].getWinNum())) {
                 System.out.print(",");
             }
-            if (max == cr.cars[i].winNum) {
-                System.out.print(String.format("%s", cr.cars[i].name));
+            if (max == cr.cars[i].getWinNum()) {
+                System.out.print(String.format("%s", cr.cars[i].getName()));
                 isFirst = false;
             }
         }
