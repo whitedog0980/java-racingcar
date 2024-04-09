@@ -21,4 +21,6 @@ public class Car implements Vehicle{
     public void increaseWinNum() {
         winNum++;
     }
+    @Override
+    public int getRandomFactor() {return 4;}
 }

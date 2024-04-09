@@ -7,4 +7,5 @@ public interface Vehicle {
     public String getName();
     public int getWinNum();
     public void increaseWinNum();
+    public int getRandomFactor();
 }

@@ -24,15 +24,15 @@ public class Race {
 
 
 
-    public boolean move() {
+    public boolean move(int random) {
         //nt num = Randoms.pickNumberInRange(0,9);
         int num = Rand.nextInt(10);
-        return (num >= 4);
+        return (num >= random);
     }
 
     public void doRace() {
         for (int i = 0; i < CarNum; i++) {
-            if (move()) {
+            if (move(cars[i].getRandomFactor())) {
                 cars[i].increaseWinNum();
             }
         }
