@@ -9,7 +9,7 @@ public class Application {
         race.initRace();
 
         System.out.println("실행 결과");
-        for (int i = 0; i < race.raceRound; i++) {
+        for (int i = 0; i < race.getRaceRound(); i++) {
             race.doRace();
         }
         race.printWinner();

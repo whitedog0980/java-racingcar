@@ -5,11 +5,11 @@ import racingcar.CreateCar;
 import java.util.Random;
 
 public class Race {
-    Random Rand = new Random();
-    CreateCar cr = new CreateCar();
-    int raceRound;
-    Car[] cars;
-    int CarNum;
+    private Random Rand = new Random();
+    private CreateCar cr = new CreateCar();
+    private int raceRound;
+    private Car[] cars;
+    private int CarNum;
 
     Race() {
         cars = cr.createCars();
@@ -23,6 +23,9 @@ public class Race {
     }
 
 
+    public int getRaceRound() {
+        return raceRound;
+    }
 
     public boolean move(int random) {
         //nt num = Randoms.pickNumberInRange(0,9);
