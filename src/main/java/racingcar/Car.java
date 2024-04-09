@@ -8,6 +8,10 @@ public class Car implements Vehicle{
     Car(String name) {
         this.name = name;
     }
+    Car(String name, int winNum) { //overloading
+        this.name = name;
+        this.winNum = winNum;
+    }
 
     @Override
     public String getName() {
